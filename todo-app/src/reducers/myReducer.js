@@ -7,3 +7,8 @@ export const initialState = {
         }
     ]
 };
+
+export const myReducer = (state, action) =>
+  switch (action.type) {
+
+}
