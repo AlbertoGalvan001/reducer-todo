@@ -34,9 +34,15 @@ export default function TodoList() {
                         setNewTodo('');
                     }}
                 >Clear Completed</button>
-
-
             </div>
+            {state.todos.map(todo => (
+                <div className={todo.completed ? 'todo-item complete' : 'todo-item'}
+                    onClick={() => dispatch({ type: 'TOGGLE', payload: todo.id })}>
+                    {''}
+                    {todo.item}{''}
+                </div>
+            ))}{''}
+
         </div>
     );
 };
