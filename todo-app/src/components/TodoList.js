@@ -17,7 +17,7 @@ export default function TodoList() {
                     className='todo-input'
                     type='text'
                     name='newTodoText'
-                    placeholer='...todo'
+                    placeholder='add todo'
                     value={newTodo}
                     onChange={handleChanges}
                 />
@@ -34,9 +34,10 @@ export default function TodoList() {
                         setNewTodo('');
                     }}
                 >Clear Completed</button>
+
             </div>
             {state.todos.map(todo => (
-                <div className={todo.completed ? 'todo-item complete' : 'todo-item'}
+                <div className={todo.completed ? 'item completed' : 'item'}
                     onClick={() => dispatch({ type: 'TOGGLE', payload: todo.id })}>
                     {''}
                     {todo.item}{''}

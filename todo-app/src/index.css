@@ -23,7 +23,7 @@ body {
     color: white;
     font-family: 'Roboto', sans-serif;
   }
-
+  
   .App {
     font-family: sans-serif;
     text-align: center;
@@ -32,10 +32,18 @@ body {
     margin: 0 auto;
   }
 
-  .header {
+  .todo-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 15px;
+    margin: 50px auto;
+    width: 60%;
+    max-width: 400px;
+  }
+  .todo-form {
+    text-align: center;
   }
   h1 {
     text-align: left;
@@ -63,18 +71,6 @@ body {
     text-decoration: line-through;
   }
 
-  form > input {
-    background-color: #2d2d37;
-    border: 0;
-    padding: 6px 0;
-    font-size: 1rem;
-    width: 240px;
-    outline: 0;
-    color: white;
-    border-bottom: 1px solid #e64944;
-    margin-right: 8px;
-  }
-
   button {
     background-color: #e64944;
     border: 1px solid #e64944;
@@ -85,7 +81,7 @@ body {
 
   input::placeholder {
     color: #e64944;
-    opacity: 1;
+    opacity: 8;
   }
   
   .clear-btn {
